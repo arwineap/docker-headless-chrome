@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends --no-install-suggests wget unzip gnupg \
+    && apt-get install -y --no-install-recommends --no-install-suggests wget unzip gnupg ca-certificates \
     && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list \
     && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
     && apt-get update \
